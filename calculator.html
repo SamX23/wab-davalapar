@@ -33,9 +33,10 @@
         </div>
 
         <div class="flex-row">
-            <div class="button divide">/</div>
+            <div class="button inverse "> +/- </div>
             <div class="button">0</div>
-            <div class="button double equals">=</div>
+            <div class="button operator">/</div>
+            <div class="button equals">=</div>
         </div>
 
         <div class="flex-row">
@@ -43,5 +44,24 @@
         </div>
 
     </div>
+
+    <div class="history card">
+        <h2>Calculation History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Angka Pertama</th>
+                    <th>Operator</th>
+                    <th>Angka Kedua</th>
+                    <th>Hasil</th>
+                </tr>
+            </thead>
+            <tbody id="historyList"></tbody>
+        </table>
+
+    </div>
+
+    <script src="assets/scripts/storage.js"></script>
+    <script src="assets/scripts/calc.js"></script>
 </body>
 </html>

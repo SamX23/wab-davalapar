@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+</head>
+
+<body>
+    <figure>
+        <img src="assets\image\two-three.jpg" alt="Kitten" id="catImg" width="500px">
+        <figcaption id="caption">Anak ucing</figcaption>
+        <p id="parf">Ini adalah anak ucing</p>
+    </figure>
+
+    <button style="align-items: center;" onclick="myFunc()">klik</button>
+
+    <script>
+        // Dom Manipulation Script
+        let catImg = document.querySelector("#catImg");
+        let catCapt = document.querySelector("#caption");
+        let catP = document.querySelector("#parf");
+        let judul = document.createElement('h1');
+        let cont = document.createElement('p');
+
+        function myFunc() {
+            catImg.setAttribute("src", "assets/image/three.bmp");
+            // for adding html
+            catCapt.innerHTML = "<em>Tiga Anak Ucing !</em>";
+            cont.innerHTML = 'Anda menekan gambar kucing sebanyak <span id="count">0</span> kali';
+
+            // for adding text
+            catP.innerText = "Ganti jadi 3 anak ucing";
+            judul.innerText = "Bismillah";
+
+            judul.style = "text-align: center;"
+
+            // for adding elements to document
+            document.body.appendChild(judul);
+            document.body.appendChild(cont);
+
+        }
+
+        // event listener
+        catImg.addEventListener('click', function (event) {
+            document.querySelector('#count').innerText++;
+            if (document.querySelector('#count').innerText > 3){
+                myFunc();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
