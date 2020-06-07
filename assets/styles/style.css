@@ -162,3 +162,43 @@ footer {
     padding: 0;
   }
 }
+
+/*********************
+    - Go to top  -
+*********************/
+/* .totop {
+	display:none;
+	position:fixed;
+	right:30px;
+	bottom:20px;
+}
+
+.gototop {
+	height:41px;
+	width:41px;
+	z-index:9;
+	cursor:pointer;
+	text-align:center;
+	background-color:#000;
+	-webkit-border-radius:90px;
+	-khtml-border-radius:90px;
+	-moz-border-radius:90px;
+	-o-border-radius:90px;
+	border-radius:90px;
+	overflow:hidden;
+}
+
+.arrowgototop {
+  background:url(../images/go-to-top-arrow.png) no-repeat;
+	position:relative;
+	left:14px;
+	top:16px;
+	width:24px;
+	height:90px;
+	z-index:10;
+}
+
+.gototop:hover {
+	opacity:0.7;
+	filter:alpha(opacity=70);
+} */

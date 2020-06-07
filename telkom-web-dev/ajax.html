@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="" src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+            $('#btnajax').click(function () {
+                $('#div1').load('form.html');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 
+    AJAX is a developer's dream, because you can:
+
+    Read data from a web server - after a web page has loaded
+    Update a web page without reloading the page
+    Send data to a web server - in the background
+    -->
+    <div id="div1">
+        <p>Go to Form</p>
+        <button id="btnajax">Go to Form</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="form.js"></script>
+    <title>Pendaftaran Pemrograman</title>
+</head>
+
+<body>
+    <h2>Form Pendaftaran Pelatihan Pemrograman</h2>
+    <form name="formdaftar" 
+          method="post" 
+          id="formdaftar"
+          action="">
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" name="nama" id="nama" required="required" size="35">
+        </div>
+        <div>
+            <label for="telpon">Telpon : </label>
+            <input type="text" name="telpon" id="telpon" required="required">
+        </div>
+        <div>
+            <label for="email">Email : </label>
+            <input type="email" name="email" id="email" required="required" maxlength="30" size="30">
+        </div>
+        <div>
+            <label for="alamat">Alamat : </label>
+            <textarea name="alamat" id="alamat" cols="30" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="jnskelamin">Gender : </label>
+            <input type="radio" name="jnskelamin" id="laki" value="L"> Laki - Laki
+            <input type="radio" name="jnskelamin" id="perempuan" value="P"> Perempuan
+        </div>
+        <div>
+            <label for="foto">Foto : </label>
+            <input type="file" name="foto" id="foto">
+        </div>
+        <div>
+            <label for="php">Pemrograman: </label>
+            <br>
+            <input type="checkbox" name="program" id="php" value="php"> PHP
+            <br>
+            <input type="checkbox" name="program" id="java" value="java"> Java
+            <br>
+            <input type="checkbox" name="program" id="python" value="python"> Python
+            <br>
+        </div>
+        <div>
+            <label for="pengalaman">Pengalaman : </label>
+            <select name="pengalaman" id="pengalaman" size="1">
+                <option value="1">Sudah Pernah Bekerja</option>
+                <option value="2">Sedang Bekerja</option>
+                <option value="3">Tidak Bekerja</option>
+                <option value="4">Sedang menempuh Pendidikan Formal</option>
+            </select>
+        </div>
+
+        <div class="button">
+            <input type="submit" value="Daftar" id="submit" name="submit">
+        </div>
+    </form>
+</body>
+
+</html>

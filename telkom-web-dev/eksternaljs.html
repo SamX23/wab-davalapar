@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <head>
+        <script>
+            let value = prompt("Masukan angka :");
+            let angka = parseInt(value);
+            if (angka > 10) {
+                document.writeln("Diatas 10")
+            } else {
+                document.writeln("Dibawah 10 cuy")
+            };
+            document.write("<br>")
+
+            let nama = prompt("Masukan Nama");
+            let job = prompt("Pekerjaan :")
+            let result = [{
+                    name: nama,
+                    jobs: job
+                },
+                {
+                    name: "Rifka",
+                    jobs: "Istri"
+                },
+                {
+                    name: 'Azzura',
+                    jobs: 'Kids'
+                }
+            ]
+
+            for (let i = 0; i < result.length; i++) {
+                document.writeln('Name : ' + result[i].name);
+                document.write('<br>')
+                document.writeln('Pekerjaan : ' + result[i].jobs);
+                document.write('<br>')
+            }
+        </script>
+    </head>
+</body>
+
+</html>
