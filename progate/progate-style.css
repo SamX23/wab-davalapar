@@ -1,3 +1,7 @@
+* {
+  margin: 0 auto;
+}
+
 body {
   font-family: "Avenir Next";
 }
@@ -23,10 +27,13 @@ li {
   padding: 33px 20px;
 }
 
-.main {
+/* .main {
+  padding: 100px 80px;
+} */
+
+.copy-container {
   padding: 100px 80px;
 }
-
 .copy-container h1 {
   font-size: 140px;
 }
