@@ -1,0 +1,71 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header-logo {
+  float: left;
+  padding: 25px;
+
+  color: blueviolet;
+  font-weight: 700;
+  text-shadow: 1px 1px #575656;
+}
+
+.header-nav li {
+  color: blueviolet;
+  list-style: none;
+  float: right;
+  padding: 25px 30px;
+  font-weight: 800;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.top-wrapper {
+  background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
+  padding: 350px 100px;
+  background-size: cover;
+}
+
+.top-font {
+  color: blueviolet;
+  font-weight: 700;
+  text-shadow: 1px 1px #575656;
+}
+
+.container {
+  display: flex;
+  margin: 20px 50px;
+  /* background-color: aquamarine; */
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  /* background-color: #fbdd1c; */
+}
+
+.box1 {
+  flex-grow: 2;
+  /* background-color: greenyellow; */
+}
+
+.box2 {
+  flex-grow: 1;
+  /* background-color: greenyellow; */
+}
+
+.top-form {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.top-form button {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
