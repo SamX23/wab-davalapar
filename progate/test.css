@@ -1,0 +1,87 @@
+/* Reset CSS (JANGAN DIHAPUS) */
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lucida Grande";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Ketik code Anda dibawah */
+.top-wrapper {
+  color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+  background-image: url("https://prog-8.com/images/html/advanced/top_en.png");
+}
+
+.container {
+  padding-top: 180px;
+  padding-bottom: 100px;
+}
+
+.container h1 {
+  font-size: 45px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.heading-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.heading-button p {
+  padding: 10px;
+}
+
+.heading-button a {
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.emailb {
+  background: #239b76;
+  color: rgba(255, 255, 255);
+  opacity: 0.8;
+  padding: 12px 24px;
+}
+
+.fb {
+  background: #3b5998;
+
+  color: rgba(255, 255, 255);
+  opacity: 0.8;
+  padding: 12px 24px;
+}
+
+.tw {
+  background: #55acee;
+
+  color: rgba(255, 255, 255);
+  opacity: 0.8;
+  padding: 12px 24px;
+  margin-left: 10px;
+}
