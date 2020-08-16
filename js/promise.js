@@ -137,13 +137,36 @@ const getCoffee = () => {
     })
 }
 
+// Jalankan secara async ( tidak mengganggu global )
 async function makeCoffee() {
+    // await getCoffee, pause perintah selanjutnya sampai promise selesai
     const coffee = await getCoffee();
     console.log(coffee);
 }
 
 makeCoffee();
 
-/* output
-Coffee didapatkan!
-*/
+// Handle onRejected
+async function makeCoffee() {
+    try {
+        const coffee = await getCoffee();
+        console.log(coffee);
+    } catch (rejectedReason) {
+        console.log(rejectedReason);
+    }
+}
+makeCoffee();
+
+// chaining promise using async-await
+async function reserveACoffee(type, miligrams) {
+    try {
+        const seeds = await getSeeds(type, miligrams);
+        const coffee = await makeCoffee(seeds);
+        const result = await servingToTable(coffee);
+        console.log(result);
+    } catch (rejectionReason) {
+        console.log(rejectionReason);
+    }
+}
+
+reserveACoffee("liberica", 80);

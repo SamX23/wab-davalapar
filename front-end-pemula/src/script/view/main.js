@@ -1,11 +1,24 @@
+import DataSource from '../data/data-source.js'
+
 const main = () => {
     const searchElement = document.querySelector("#searchElement");
     const buttonSearchElement = document.querySelector("#searchButtonElement");
     const clubListElement = document.querySelector("#clubList");
 
-    const onButtonSearchClicked = () => {
-        const dataSource = new DataSource(renderResult, fallbackResult);
-        dataSource.searchClub(searchElement.value);
+    // Membuat button untuk promise catch
+    // const onButtonSearchClicked = () => {
+    //     DataSource.searchClub(searchElement.value)
+    //         .then(renderResult)
+    //         .catch(fallbackResult);
+    // };
+    // Membuat button berjalan secara async
+    const onButtonSearchClicked = async () => {
+        try {
+            const result = await DataSource.searchClub(searchElement.value);
+            renderResult(result);
+        } catch (e) {
+            fallbackResult(e);
+        }
     };
 
     const renderResult = results => {
@@ -37,3 +50,5 @@ const main = () => {
 
     buttonSearchElement.addEventListener("click", onButtonSearchClicked);
 };
+
+export default main;
