@@ -1,21 +1,10 @@
 import ImageFigure from './image-figure.js'
-// const img = new ImageFigure()
 
-let imageFigureElement = document.querySelector("image-figure");
+// Kalau tidak dicantumkan pada HTML, gunakan kode dibawah ini
+const imageFigureElement = document.createElement("image-figure");
 
-// Jika tidak tersedia pada DOM maka dibuat secara sintaksis.
-if (!imageFigureElement) {
-    imageFigureElement = document.createElement("image-figure");
-    document.body.appendChild(imageFigureElement);
-}
+imageFigureElement.setAttribute("src", "https://i.imgur.com/iJq78XH.jpg");
+imageFigureElement.setAttribute("alt", "Dicoding Logo");
+imageFigureElement.setAttribute("caption", "Huruf g dalam logo Dicoding");
 
-// mengubah/manambahkan nilai attribute caption.
-setTimeout(() => {
-    imageFigureElement.setAttribute("caption", "Gambar 1");
-}, 1000);
-
-
-// menghapus imageFigureElement dari DOM
-setTimeout(() => {
-    imageFigureElement.remove();
-}, 3000);
+document.body.appendChild(imageFigureElement);

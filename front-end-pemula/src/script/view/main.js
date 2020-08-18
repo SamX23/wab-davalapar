@@ -1,16 +1,11 @@
+import '../component/search-bar.js'
+import '../component/club-list.js'
 import DataSource from '../data/data-source.js'
 
 const main = () => {
-    const searchElement = document.querySelector("#searchElement");
-    const buttonSearchElement = document.querySelector("#searchButtonElement");
-    const clubListElement = document.querySelector("#clubList");
+    const searchElement = document.querySelector("search-bar");
+    const clubListElement = document.querySelector("club-list");
 
-    // Membuat button untuk promise catch
-    // const onButtonSearchClicked = () => {
-    //     DataSource.searchClub(searchElement.value)
-    //         .then(renderResult)
-    //         .catch(fallbackResult);
-    // };
     // Membuat button berjalan secara async
     const onButtonSearchClicked = async () => {
         try {
@@ -21,34 +16,25 @@ const main = () => {
         }
     };
 
-    const renderResult = results => {
-        clubListElement.innerHTML = "";
-        results.forEach(club => {
-            const {
-                name,
-                fanArt,
-                description
-            } = club
-            const clubElement = document.createElement("div");
-            clubElement.setAttribute("class", "club");
+    // const onSearchEnter = async () => {
+    //     // Number 13 is the "Enter" key on the keyboard
+    //     try {
+    //         if (event.keyCode === 13) {
+    //             event.preventDefault();
+    //             alert('asd')
+    //             searchElement.clickEvent = onButtonSearchClicked;
+    //         };
+    //     } catch (e) {
+    //         fallbackResult(e);
+    //     }
+    // }
 
-            clubElement.innerHTML = `
-            <img class="fan-art-club" src="${fanArt}" alt="Fan Art">\n
-                <div class="club-info">\n
-                    <h2>${name}</h2>\n
-                    <p>${description}</p>
-                </div>`
+    const renderResult = results => clubListElement.clubs = results
+    const fallbackResult = message => clubListElement.renderError(message)
 
-            clubListElement.appendChild(clubElement);
-        })
-    };
+    searchElement.clickEvent = onButtonSearchClicked;
+    // searchElement.clickEvent = onSearchEnter;
 
-    const fallbackResult = message => {
-        clubListElement.innerHTML = "";
-        clubListElement.innerHTML += `<h2 class="placeholder">${message}</h2>`
-    };
-
-    buttonSearchElement.addEventListener("click", onButtonSearchClicked);
 };
 
 export default main;
