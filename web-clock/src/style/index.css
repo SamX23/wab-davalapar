@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto
+}
+
+.clock {
+    width: 400px;
+    background-color: rgb(28, 28, 49);
+    padding: 30px;
+    color: rgb(219, 220, 223);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.clock .time {
+    font-size: xx-large;
+    margin: 0 auto;
+}
+
+.clock .date {
+    font-size: 24px;
+    margin: 0 auto;
+}
