@@ -18,11 +18,6 @@ class SearchBar extends HTMLElement {
         this.render()
     }
 
-    // set enterEvent(event) {
-    //     this._clickEvent = event
-    //     this.render()
-    // }
-
     get value() {
         return this._shadowRoot.querySelector("#searchElement").value;
     }
@@ -99,7 +94,6 @@ class SearchBar extends HTMLElement {
 
         this._shadowRoot.querySelector("#searchButtonElement")
             .addEventListener("click", this._clickEvent);
-
         // Hapus jika tidak ingin auto show
         this._shadowRoot.querySelector("#searchElement")
             .addEventListener("keyup", this._clickEvent);

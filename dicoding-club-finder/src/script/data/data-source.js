@@ -1,4 +1,3 @@
-import clubs from './clubs.js';
 class DataSource {
     static searchClub(keyword) {
         // Penggunaan Promise
@@ -10,7 +9,6 @@ class DataSource {
         //         reject(`${keyword} is not found`);
         //     }
         // })
-
         // Penggunaan fetch
         const baseUrl = "https://www.thesportsdb.com/api/v1/json/1/searchteams.php"
         return fetch(`${baseUrl}?t=${keyword}`)

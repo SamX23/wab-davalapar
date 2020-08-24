@@ -15,12 +15,6 @@ class AppBar extends HTMLElement {
     render() {
         this._shadowRoot.innerHTML = `
         <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
         :host {
                 display: block;
                 width: 100%;
@@ -28,7 +22,7 @@ class AppBar extends HTMLElement {
                 color: white;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             }
-        h2{
+        h2 {
             padding: 16px;
         }
         </style>

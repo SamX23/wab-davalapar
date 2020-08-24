@@ -1,22 +1,6 @@
 function main() {
     const baseUrl = "https://web-server-book-dicoding.appspot.com"
     const getBook = () => {
-        // Metode old xhr
-        // const xhr = new XMLHttpRequest()
-        // xhr.onload = function () {
-        //     const responseJson = JSON.parse(this.responseText)
-        //     if (responseJson.error) {
-        //         showResponseMessage(responseJson.message)
-        //     } else {
-        //         renderAllBooks(responseJson.books)
-        //     }
-        // }
-        // xhr.onerror = function () {
-        //     showResponseMessage()
-        // }
-        // // Membuat GET request dan menetapkan target URL
-        // xhr.open("GET", `${baseUrl}/list`)
-        // xhr.send()
         // Menggunakan gaya async/await
         // try {
         //     const response = await fetch(`${baseUrl}/list`)
